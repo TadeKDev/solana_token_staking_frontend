@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+@layer utilities {
+    .bg-primary {
+        @apply bg-[#262626];
+    }
+
+    .bg-secondary {
+        @apply bg-[#255C99];
+    }
+
+    .bg-secondary-hover {
+        @apply hover:bg-[#15539a];
+    }
+
+    .text-primary {
+        @apply text-[#FF715B];
+    }
+
+    .text-secondary {
+        @apply text-[#F9EBE0];
+    }
+}
+
+@layer components {
+    .app {
+        @apply bg-primary min-h-screen flex flex-col justify-between items-center;
+    }
+
+    .main {
+        @apply container flex-1 px-3 mt-5 mb-20;
+    }
+
+    .header {
+        @apply w-full py-5 px-3 flex flex-col;
+    }
+
+    .header-main {
+        @apply flex justify-between items-center;
+    }
+
+    .header-mobile {
+        @apply sm:hidden flex flex-col items-center space-y-6 mt-6;
+    }
+
+    .footer {
+        @apply w-full pt-4 pb-8 px-3 flex items-center justify-center;
+    }
+
+    .link {
+        @apply underline underline-offset-2 hover:text-secondary transition-colors duration-200 ease-in-out mx-1;
+    }
+
+    .heading-1 {
+        @apply text-3xl text-secondary font-semibold;
+    }
+
+    .text-input {
+        @apply p-2 rounded-sm m-4 outline-[#FF715B];
+    }
+
+    .button {
+        @apply p-2 rounded-sm bg-secondary text-secondary border-none bg-secondary-hover disabled:bg-gray-600 disabled:cursor-not-allowed;
+    }
+}
+
+.wallet-adapter-dropdown-list {
+    @apply bg-gray-700;
+}
+
+.wallet-adapter-dropdown-list > .wallet-adapter-dropdown-list-item {
+    @apply hover:bg-sky-700;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
